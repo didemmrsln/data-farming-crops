@@ -1,10 +1,13 @@
+"""Module: corn
 
-class Corn:
-    def __init__(self):
-        self.grains = 0
+Defines the Corn crop, a subclass of Crop."""
+
+from farm.crop import Crop
+
+
+class Corn(Crop):
+    """A corn crop that gains 10 grains each time it is watered."""
 
     def water(self):
+        """Add 10 grains to the corn crop."""
         self.grains += 10
-
-    def ripe(self):
-        return self.grains >= 15
